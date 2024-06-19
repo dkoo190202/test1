@@ -58,8 +58,8 @@ void main(void) {
     TRISAbits.TRISA2 = 1; //MQ2
     ANSELAbits.ANSA2 = 1;
 
-//    TRISCbits.TRISC0 = 1; //MP2
-//    ANSELCbits.ANSC0 = 1;
+    TRISCbits.TRISC0 = 1; //MP2
+    ANSELCbits.ANSC0 = 1;
 
     USART_Init();
 
