@@ -1,0 +1,384 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1825 ]
+[d frameptr 6 ]
+"5 D:\Microchip\xc8\pic\sources\c99\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"4 D:\Microchip\xc8\pic\sources\c99\common\flge.c
+[v ___flge __flge `(b  1 e 0 0 ]
+"43 D:\Microchip\xc8\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+"5 D:\Microchip\xc8\pic\sources\c99\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"5 D:\Microchip\xc8\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"5 D:\Microchip\xc8\pic\sources\c99\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"10 D:\Microchip\xc8\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"242
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"4 D:\Microchip\xc8\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"10 D:\Microchip\xc8\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+"6 D:\Microchip\xc8\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"26 D:\Cac mon hoc\doan_totnghiep\mplab\node_1.X\main.c
+[v _read_temp read_temp `(ul  1 e 4 0 ]
+"47
+[v _main main `(v  1 e 1 0 ]
+"107
+[v _ngat_uart ngat_uart `II(v  1 e 1 0 ]
+"4 D:\Cac mon hoc\doan_totnghiep\mplab\node_1.X\tv_aht10.c
+[v _Cmd_Aht10 Cmd_Aht10 `(v  1 e 1 0 ]
+"3 D:\Cac mon hoc\doan_totnghiep\mplab\node_1.X\tv_i2c.c
+[v _i2c_start i2c_start `(v  1 e 1 0 ]
+"13
+[v _i2c_stop i2c_stop `(v  1 e 1 0 ]
+"23
+[v _i2c_write i2c_write `(v  1 e 1 0 ]
+"39
+[v _i2c_read i2c_read `(uc  1 e 1 0 ]
+"4 D:\Cac mon hoc\doan_totnghiep\mplab\node_1.X\tv_lcd_i2c.c
+[v _SEND_TO_LCD_I2C SEND_TO_LCD_I2C `(v  1 e 1 0 ]
+"12
+[v _PULSE_ENA_I2C PULSE_ENA_I2C `(v  1 e 1 0 ]
+"22
+[v _SEND_NIBBLES_LCD_I2C SEND_NIBBLES_LCD_I2C `(v  1 e 1 0 ]
+"31
+[v _LCD_I2C_COMMAND LCD_I2C_COMMAND `(v  1 e 1 0 ]
+"54
+[v _LCD_I2C_CHAR LCD_I2C_CHAR `(v  1 e 1 0 ]
+"5 D:\Cac mon hoc\doan_totnghiep\mplab\node_1.X\tv_uart.c
+[v _USART_Init USART_Init `(v  1 e 1 0 ]
+"18
+[v _USART_TransmitChar USART_TransmitChar `(v  1 e 1 0 ]
+"23
+[v _USART_TransmitString USART_TransmitString `(v  1 e 1 0 ]
+"29
+[v _USART_ReceiveChar USART_ReceiveChar `(uc  1 e 1 0 ]
+"14 D:\Cac mon hoc\doan_totnghiep\mplab\node_1.X/aht10_header.h
+[v _temp_glo temp_glo `ul  1 e 4 0 ]
+"15 D:\Cac mon hoc\doan_totnghiep\mplab\node_1.X/lcd_i2c_header.h
+[v _LCD_BACKLIGHT LCD_BACKLIGHT `uc  1 e 1 0 ]
+[s S374 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"374 D:\Microchip\xc8\pic\include\proc\pic16f1825.h
+[s S383 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S388 . 1 `S374 1 . 1 0 `S383 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES388  1 e 1 @11 ]
+[s S307 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+]
+"494
+[u S314 . 1 `S307 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES314  1 e 1 @14 ]
+[s S429 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"546
+[u S438 . 1 `S429 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES438  1 e 1 @17 ]
+[s S51 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+]
+"1123
+[u S58 . 1 `S51 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES58  1 e 1 @140 ]
+[s S85 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+]
+"1173
+[u S92 . 1 `S85 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES92  1 e 1 @142 ]
+[s S406 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSP1IE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 TMR1GIE 1 0 :1:7 
+]
+"1225
+[u S415 . 1 `S406 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES415  1 e 1 @145 ]
+"1612
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"1746
+[v _ADRES ADRES `VEus  1 e 2 @155 ]
+"1793
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
+[s S173 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+`uc 1 CHS4 1 0 :1:6 
+]
+"1818
+[s S181 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 ADGO 1 0 :1:1 
+`uc 1 CHS 1 0 :5:2 
+]
+[s S185 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+]
+[u S188 . 1 `S173 1 . 1 0 `S181 1 . 1 0 `S185 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES188  1 e 1 @157 ]
+"1873
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
+[s S68 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+]
+"1960
+[u S75 . 1 `S68 1 . 1 0 ]
+[v _LATAbits LATAbits `VES75  1 e 1 @268 ]
+[s S102 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+]
+"2005
+[u S109 . 1 `S102 1 . 1 0 ]
+[v _LATCbits LATCbits `VES109  1 e 1 @270 ]
+[s S137 . 1 `uc 1 ANSA0 1 0 :1:0 
+`uc 1 ANSA1 1 0 :1:1 
+`uc 1 ANSA2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 ANSA4 1 0 :1:4 
+]
+"2752
+[s S143 . 1 `uc 1 ANSELA 1 0 :5:0 
+]
+[u S145 . 1 `S137 1 . 1 0 `S143 1 . 1 0 ]
+[v _ANSELAbits ANSELAbits `VES145  1 e 1 @396 ]
+[s S119 . 1 `uc 1 ANSC0 1 0 :1:0 
+`uc 1 ANSC1 1 0 :1:1 
+`uc 1 ANSC2 1 0 :1:2 
+`uc 1 ANSC3 1 0 :1:3 
+]
+"2798
+[s S124 . 1 `uc 1 ANSELC 1 0 :4:0 
+]
+[u S126 . 1 `S119 1 . 1 0 `S124 1 . 1 0 ]
+[v _ANSELCbits ANSELCbits `VES126  1 e 1 @398 ]
+"3022
+[v _RCREG RCREG `VEuc  1 e 1 @409 ]
+"3042
+[v _TXREG TXREG `VEuc  1 e 1 @410 ]
+"3062
+[v _SPBRG SPBRG `VEus  1 e 2 @411 ]
+"3109
+[v _RCSTA RCSTA `VEuc  1 e 1 @413 ]
+"3171
+[v _TXSTA TXSTA `VEuc  1 e 1 @414 ]
+"6283
+[v _BRG16 BRG16 `VEb  1 e 0 @3323 ]
+"6286
+[v _BRGH BRGH `VEb  1 e 0 @3314 ]
+"6856
+[v _LATC1 LATC1 `VEb  1 e 0 @2161 ]
+"6859
+[v _LATC2 LATC2 `VEb  1 e 0 @2162 ]
+"7498
+[v _TRISC1 TRISC1 `VEb  1 e 0 @1137 ]
+"7501
+[v _TRISC2 TRISC2 `VEb  1 e 0 @1138 ]
+"7507
+[v _TRISC4 TRISC4 `VEb  1 e 0 @1140 ]
+"7510
+[v _TRISC5 TRISC5 `VEb  1 e 0 @1141 ]
+"7555
+[v _TXIF TXIF `VEb  1 e 0 @140 ]
+"13 D:\Cac mon hoc\doan_totnghiep\mplab\node_1.X\main.c
+[v _printf_mode printf_mode `uc  1 e 1 0 ]
+"14
+[v _byte_rx byte_rx `VEuc  1 e 1 0 ]
+[v _rx_index rx_index `VEuc  1 e 1 0 ]
+"15
+[v _ena_rx ena_rx `VEb  1 e 0 0 ]
+[v _ena_send ena_send `VEb  1 e 0 0 ]
+"22
+[v _bf_rx bf_rx `[3]uc  1 e 3 0 ]
+"23
+[v _bf_tx bf_tx `[20]uc  1 e 20 0 ]
+"44
+[v _mq2 mq2 `ui  1 e 2 0 ]
+[v _mp2 mp2 `ui  1 e 2 0 ]
+"45
+[v _temp temp `ul  1 e 4 0 ]
+"47
+[v _main main `(v  1 e 1 0 ]
+{
+"105
+} 0
+"26
+[v _read_temp read_temp `(ul  1 e 4 0 ]
+{
+"27
+[v read_temp@temp temp `ul  1 a 4 20 ]
+[v read_temp@dt3 dt3 `ul  1 a 4 16 ]
+[v read_temp@dt2 dt2 `ul  1 a 4 12 ]
+[v read_temp@dt1 dt1 `ul  1 a 4 8 ]
+"41
+} 0
+"39 D:\Cac mon hoc\doan_totnghiep\mplab\node_1.X\tv_i2c.c
+[v _i2c_read i2c_read `(uc  1 e 1 0 ]
+{
+[v i2c_read@ACK ACK `uc  1 a 1 wreg ]
+"45
+[v i2c_read@i i `uc  1 a 1 3 ]
+"41
+[v i2c_read@DATA DATA `uc  1 a 1 4 ]
+"39
+[v i2c_read@ACK ACK `uc  1 a 1 wreg ]
+"42
+[v i2c_read@ACK ACK `uc  1 a 1 2 ]
+"59
+} 0
+"5 D:\Microchip\xc8\pic\sources\c99\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwmod@counter counter `uc  1 a 1 10 ]
+"5
+[v ___lwmod@divisor divisor `ui  1 p 2 0 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 2 ]
+"25
+} 0
+"5 D:\Microchip\xc8\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 6 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 8 ]
+"5
+[v ___lwdiv@divisor divisor `ui  1 p 2 1 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 3 ]
+"30
+} 0
+"5 D:\Microchip\xc8\pic\sources\c99\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+{
+"10
+[v ___llmod@counter counter `uc  1 a 1 11 ]
+"5
+[v ___llmod@divisor divisor `ul  1 p 4 5 ]
+[v ___llmod@dividend dividend `ul  1 p 4 9 ]
+"25
+} 0
+"5 D:\Microchip\xc8\pic\sources\c99\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+{
+"10
+[v ___lldiv@quotient quotient `ul  1 a 4 0 ]
+"11
+[v ___lldiv@counter counter `uc  1 a 1 4 ]
+"5
+[v ___lldiv@divisor divisor `ul  1 p 4 1 ]
+[v ___lldiv@dividend dividend `ul  1 p 4 5 ]
+"30
+} 0
+"23 D:\Cac mon hoc\doan_totnghiep\mplab\node_1.X\tv_uart.c
+[v _USART_TransmitString USART_TransmitString `(v  1 e 1 0 ]
+{
+[v USART_TransmitString@out out `*.4uc  1 a 1 wreg ]
+"24
+[v USART_TransmitString@i i `uc  1 a 1 4 ]
+"23
+[v USART_TransmitString@out out `*.4uc  1 a 1 wreg ]
+[v USART_TransmitString@out out `*.4uc  1 a 1 3 ]
+"27
+} 0
+"18
+[v _USART_TransmitChar USART_TransmitChar `(v  1 e 1 0 ]
+{
+[v USART_TransmitChar@out out `uc  1 a 1 wreg ]
+[v USART_TransmitChar@out out `uc  1 a 1 wreg ]
+[v USART_TransmitChar@out out `uc  1 a 1 1 ]
+"21
+} 0
+"5
+[v _USART_Init USART_Init `(v  1 e 1 0 ]
+{
+"16
+} 0
+"4 D:\Cac mon hoc\doan_totnghiep\mplab\node_1.X\tv_aht10.c
+[v _Cmd_Aht10 Cmd_Aht10 `(v  1 e 1 0 ]
+{
+"11
+} 0
+"23 D:\Cac mon hoc\doan_totnghiep\mplab\node_1.X\tv_i2c.c
+[v _i2c_write i2c_write `(v  1 e 1 0 ]
+{
+[v i2c_write@DATA DATA `uc  1 a 1 wreg ]
+"25
+[v i2c_write@i i `uc  1 a 1 4 ]
+"23
+[v i2c_write@DATA DATA `uc  1 a 1 wreg ]
+"26
+[v i2c_write@DATA DATA `uc  1 a 1 3 ]
+"37
+} 0
+"13
+[v _i2c_stop i2c_stop `(v  1 e 1 0 ]
+{
+"21
+} 0
+"3
+[v _i2c_start i2c_start `(v  1 e 1 0 ]
+{
+"11
+} 0
+"107 D:\Cac mon hoc\doan_totnghiep\mplab\node_1.X\main.c
+[v _ngat_uart ngat_uart `II(v  1 e 1 0 ]
+{
+"122
+} 0
+"29 D:\Cac mon hoc\doan_totnghiep\mplab\node_1.X\tv_uart.c
+[v _USART_ReceiveChar USART_ReceiveChar `(uc  1 e 1 0 ]
+{
+"37
+} 0
