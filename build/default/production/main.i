@@ -4824,8 +4824,8 @@ void main(void) {
 
     ANSELCbits.ANSC2 = 0;
 
-
-
+    TRISAbits.TRISA2 = 1;
+    ANSELAbits.ANSA2 = 1;
 
 
 
