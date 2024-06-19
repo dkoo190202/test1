@@ -55,8 +55,8 @@ void main(void) {
 
     ANSELCbits.ANSC2 = 0; // SDA
 
-    TRISAbits.TRISA2 = 1; //MQ2
-    ANSELAbits.ANSA2 = 1;
+//    TRISAbits.TRISA2 = 1; //MQ2
+//    ANSELAbits.ANSA2 = 1;
 
 //    TRISCbits.TRISC0 = 1; //MP2
 //    ANSELCbits.ANSC0 = 1;
