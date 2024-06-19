@@ -785,12 +785,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "59
 [; ;main.c: 59:     ANSELAbits.ANSA2 = 1;
 [e = . . _ANSELAbits 0 2 -> -> 1 `i `uc ]
-"61
-[; ;main.c: 61:     TRISCbits.TRISC0 = 1;
-[e = . . _TRISCbits 0 0 -> -> 1 `i `uc ]
-"62
-[; ;main.c: 62:     ANSELCbits.ANSC0 = 1;
-[e = . . _ANSELCbits 0 0 -> -> 1 `i `uc ]
 "64
 [; ;main.c: 64:     USART_Init();
 [e ( _USART_Init ..  ]
