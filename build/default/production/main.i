@@ -4827,8 +4827,8 @@ void main(void) {
     TRISAbits.TRISA2 = 1;
     ANSELAbits.ANSA2 = 1;
 
-    TRISCbits.TRISC0 = 1;
-    ANSELCbits.ANSC0 = 1;
+
+
 
     USART_Init();
 
