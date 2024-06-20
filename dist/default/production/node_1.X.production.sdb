@@ -31,7 +31,7 @@
 [v _read_temp read_temp `(ul  1 e 4 0 ]
 "47
 [v _main main `(v  1 e 1 0 ]
-"107
+"114
 [v _ngat_uart ngat_uart `II(v  1 e 1 0 ]
 "4 D:\Cac mon hoc\doan_totnghiep\mplab\node_1.X\tv_aht10.c
 [v _Cmd_Aht10 Cmd_Aht10 `(v  1 e 1 0 ]
@@ -251,7 +251,7 @@
 "47
 [v _main main `(v  1 e 1 0 ]
 {
-"105
+"112
 } 0
 "26
 [v _read_temp read_temp `(ul  1 e 4 0 ]
@@ -372,10 +372,10 @@
 {
 "11
 } 0
-"107 D:\Cac mon hoc\doan_totnghiep\mplab\node_1.X\main.c
+"114 D:\Cac mon hoc\doan_totnghiep\mplab\node_1.X\main.c
 [v _ngat_uart ngat_uart `II(v  1 e 1 0 ]
 {
-"122
+"129
 } 0
 "29 D:\Cac mon hoc\doan_totnghiep\mplab\node_1.X\tv_uart.c
 [v _USART_ReceiveChar USART_ReceiveChar `(uc  1 e 1 0 ]

@@ -749,7 +749,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `ui
 ]
 "45
-[; ;main.c: 45: unsigned long temp=0;
+[; ;main.c: 45: unsigned long temp = 0;
 [v _temp `ul ~T0 @X0 1 e ]
 [i _temp
 -> -> -> 0 `i `l `ul
@@ -818,8 +818,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "76
 [; ;main.c: 76:     bf_tx[15] = (unsigned char) (mp2 / 1 % 10 + 48);
 [e = *U + &U _bf_tx * -> -> -> 15 `i `ui `ux -> -> # *U &U _bf_tx `ui `ux -> + % / _mp2 -> -> 1 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
-"77
-[; ;main.c: 77:     while (1) {
+"78
+[; ;main.c: 78:     while (temp <= 314573 || temp >= 781189) {
+[e $U 338  ]
 [e :U 339 ]
 {
 "79
@@ -831,141 +832,162 @@ Version 4.0 HI-TECH Software Intermediate Code
 "81
 [; ;main.c: 81:         temp = read_temp();
 [e = _temp ( _read_temp ..  ]
-"82
-[; ;main.c: 82:         bf_tx[2] = (unsigned char) (temp / 100000 % 10 + 48);
-[e = *U + &U _bf_tx * -> -> -> 2 `i `ui `ux -> -> # *U &U _bf_tx `ui `ux -> + % / _temp -> -> 100000 `l `ul -> -> -> 10 `i `l `ul -> -> -> 48 `i `l `ul `uc ]
 "83
-[; ;main.c: 83:         bf_tx[3] = (unsigned char) (temp / 10000 % 10 + 48);
-[e = *U + &U _bf_tx * -> -> -> 3 `i `ui `ux -> -> # *U &U _bf_tx `ui `ux -> + % / _temp -> -> -> 10000 `i `l `ul -> -> -> 10 `i `l `ul -> -> -> 48 `i `l `ul `uc ]
-"84
-[; ;main.c: 84:         bf_tx[4] = (unsigned char) (temp / 1000 % 10 + 48);
-[e = *U + &U _bf_tx * -> -> -> 4 `i `ui `ux -> -> # *U &U _bf_tx `ui `ux -> + % / _temp -> -> -> 1000 `i `l `ul -> -> -> 10 `i `l `ul -> -> -> 48 `i `l `ul `uc ]
-"85
-[; ;main.c: 85:         bf_tx[5] = (unsigned char) (temp / 100 % 10 + 48);
-[e = *U + &U _bf_tx * -> -> -> 5 `i `ui `ux -> -> # *U &U _bf_tx `ui `ux -> + % / _temp -> -> -> 100 `i `l `ul -> -> -> 10 `i `l `ul -> -> -> 48 `i `l `ul `uc ]
-"86
-[; ;main.c: 86:         bf_tx[6] = (unsigned char) (temp / 10 % 10 + 48);
-[e = *U + &U _bf_tx * -> -> -> 6 `i `ui `ux -> -> # *U &U _bf_tx `ui `ux -> + % / _temp -> -> -> 10 `i `l `ul -> -> -> 10 `i `l `ul -> -> -> 48 `i `l `ul `uc ]
-"87
-[; ;main.c: 87:         bf_tx[7] = (unsigned char) (temp / 1 % 10 + 48);
-[e = *U + &U _bf_tx * -> -> -> 7 `i `ui `ux -> -> # *U &U _bf_tx `ui `ux -> + % / _temp -> -> -> 1 `i `l `ul -> -> -> 10 `i `l `ul -> -> -> 48 `i `l `ul `uc ]
-"89
-[; ;main.c: 89:         ADCON0 = 0X09;
-[e = _ADCON0 -> -> 9 `i `uc ]
-"90
-[; ;main.c: 90:         _delay((unsigned long)((50)*(16000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
-"91
-[; ;main.c: 91:         ADCON0bits.ADGO = 1;
-[e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
-"92
-[; ;main.c: 92:         _delay((unsigned long)((50)*(16000000/4000.0)));
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-"93
-[; ;main.c: 93:         mq2 = ADRES;
-[e = _mq2 -> _ADRES `ui ]
-"94
-[; ;main.c: 94:         bf_tx[8] = (unsigned char) (mq2 / 1000 % 10 + 48);
-[e = *U + &U _bf_tx * -> -> -> 8 `i `ui `ux -> -> # *U &U _bf_tx `ui `ux -> + % / _mq2 -> -> 1000 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
-"95
-[; ;main.c: 95:         bf_tx[9] = (unsigned char) (mq2 / 100 % 10 + 48);
-[e = *U + &U _bf_tx * -> -> -> 9 `i `ui `ux -> -> # *U &U _bf_tx `ui `ux -> + % / _mq2 -> -> 100 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
-"96
-[; ;main.c: 96:         bf_tx[10] = (unsigned char) (mq2 / 10 % 10 + 48);
-[e = *U + &U _bf_tx * -> -> -> 10 `i `ui `ux -> -> # *U &U _bf_tx `ui `ux -> + % / _mq2 -> -> 10 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
-"97
-[; ;main.c: 97:         bf_tx[11] = (unsigned char) (mq2 / 1 % 10 + 48);
-[e = *U + &U _bf_tx * -> -> -> 11 `i `ui `ux -> -> # *U &U _bf_tx `ui `ux -> + % / _mq2 -> -> 1 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
-"100
-[; ;main.c: 100:         if (ena_send == 1) {
-[e $ ! == -> _ena_send `i -> 1 `i 341  ]
-{
-"101
-[; ;main.c: 101:             ena_send = 0;
-[e = _ena_send -> -> 0 `i `b ]
-"102
-[; ;main.c: 102:             USART_TransmitString(bf_tx);
-[e ( _USART_TransmitString (1 &U _bf_tx ]
-"103
-[; ;main.c: 103:         }
-}
-[e :U 341 ]
-"104
-[; ;main.c: 104:     }
+[; ;main.c: 83:     }
 }
 [e :U 338 ]
-[e $U 339  ]
+"78
+[; ;main.c: 78:     while (temp <= 314573 || temp >= 781189) {
+[e $ || <= _temp -> -> 314573 `l `ul >= _temp -> -> 781189 `l `ul 339  ]
 [e :U 340 ]
-"105
-[; ;main.c: 105: }
+"84
+[; ;main.c: 84:     while (1) {
+[e :U 342 ]
+{
+"86
+[; ;main.c: 86:         Cmd_Aht10();
+[e ( _Cmd_Aht10 ..  ]
+"87
+[; ;main.c: 87:         _delay((unsigned long)((80)*(16000000/4000.0)));
+[e ( __delay (1 -> * -> -> 80 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+"88
+[; ;main.c: 88:         temp = read_temp();
+[e = _temp ( _read_temp ..  ]
+"89
+[; ;main.c: 89:         bf_tx[2] = (unsigned char) (temp / 100000 % 10 + 48);
+[e = *U + &U _bf_tx * -> -> -> 2 `i `ui `ux -> -> # *U &U _bf_tx `ui `ux -> + % / _temp -> -> 100000 `l `ul -> -> -> 10 `i `l `ul -> -> -> 48 `i `l `ul `uc ]
+"90
+[; ;main.c: 90:         bf_tx[3] = (unsigned char) (temp / 10000 % 10 + 48);
+[e = *U + &U _bf_tx * -> -> -> 3 `i `ui `ux -> -> # *U &U _bf_tx `ui `ux -> + % / _temp -> -> -> 10000 `i `l `ul -> -> -> 10 `i `l `ul -> -> -> 48 `i `l `ul `uc ]
+"91
+[; ;main.c: 91:         bf_tx[4] = (unsigned char) (temp / 1000 % 10 + 48);
+[e = *U + &U _bf_tx * -> -> -> 4 `i `ui `ux -> -> # *U &U _bf_tx `ui `ux -> + % / _temp -> -> -> 1000 `i `l `ul -> -> -> 10 `i `l `ul -> -> -> 48 `i `l `ul `uc ]
+"92
+[; ;main.c: 92:         bf_tx[5] = (unsigned char) (temp / 100 % 10 + 48);
+[e = *U + &U _bf_tx * -> -> -> 5 `i `ui `ux -> -> # *U &U _bf_tx `ui `ux -> + % / _temp -> -> -> 100 `i `l `ul -> -> -> 10 `i `l `ul -> -> -> 48 `i `l `ul `uc ]
+"93
+[; ;main.c: 93:         bf_tx[6] = (unsigned char) (temp / 10 % 10 + 48);
+[e = *U + &U _bf_tx * -> -> -> 6 `i `ui `ux -> -> # *U &U _bf_tx `ui `ux -> + % / _temp -> -> -> 10 `i `l `ul -> -> -> 10 `i `l `ul -> -> -> 48 `i `l `ul `uc ]
+"94
+[; ;main.c: 94:         bf_tx[7] = (unsigned char) (temp / 1 % 10 + 48);
+[e = *U + &U _bf_tx * -> -> -> 7 `i `ui `ux -> -> # *U &U _bf_tx `ui `ux -> + % / _temp -> -> -> 1 `i `l `ul -> -> -> 10 `i `l `ul -> -> -> 48 `i `l `ul `uc ]
+"96
+[; ;main.c: 96:         ADCON0 = 0X09;
+[e = _ADCON0 -> -> 9 `i `uc ]
+"97
+[; ;main.c: 97:         _delay((unsigned long)((50)*(16000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 16000000 `l `d .4000000.0 `ul ]
+"98
+[; ;main.c: 98:         ADCON0bits.ADGO = 1;
+[e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
+"99
+[; ;main.c: 99:         _delay((unsigned long)((50)*(16000000/4000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+"100
+[; ;main.c: 100:         mq2 = ADRES;
+[e = _mq2 -> _ADRES `ui ]
+"101
+[; ;main.c: 101:         bf_tx[8] = (unsigned char) (mq2 / 1000 % 10 + 48);
+[e = *U + &U _bf_tx * -> -> -> 8 `i `ui `ux -> -> # *U &U _bf_tx `ui `ux -> + % / _mq2 -> -> 1000 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
+"102
+[; ;main.c: 102:         bf_tx[9] = (unsigned char) (mq2 / 100 % 10 + 48);
+[e = *U + &U _bf_tx * -> -> -> 9 `i `ui `ux -> -> # *U &U _bf_tx `ui `ux -> + % / _mq2 -> -> 100 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
+"103
+[; ;main.c: 103:         bf_tx[10] = (unsigned char) (mq2 / 10 % 10 + 48);
+[e = *U + &U _bf_tx * -> -> -> 10 `i `ui `ux -> -> # *U &U _bf_tx `ui `ux -> + % / _mq2 -> -> 10 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
+"104
+[; ;main.c: 104:         bf_tx[11] = (unsigned char) (mq2 / 1 % 10 + 48);
+[e = *U + &U _bf_tx * -> -> -> 11 `i `ui `ux -> -> # *U &U _bf_tx `ui `ux -> + % / _mq2 -> -> 1 `i `ui -> -> 10 `i `ui -> -> 48 `i `ui `uc ]
+"107
+[; ;main.c: 107:         if (ena_send == 1) {
+[e $ ! == -> _ena_send `i -> 1 `i 344  ]
+{
+"108
+[; ;main.c: 108:             ena_send = 0;
+[e = _ena_send -> -> 0 `i `b ]
+"109
+[; ;main.c: 109:             USART_TransmitString(bf_tx);
+[e ( _USART_TransmitString (1 &U _bf_tx ]
+"110
+[; ;main.c: 110:         }
+}
+[e :U 344 ]
+"111
+[; ;main.c: 111:     }
+}
+[e :U 341 ]
+[e $U 342  ]
+[e :U 343 ]
+"112
+[; ;main.c: 112: }
 [e :UE 337 ]
 }
 [v $root$_ngat_uart `(v ~T0 @X0 0 e ]
-"107
-[; ;main.c: 107: void __attribute__((picinterrupt(("")))) ngat_uart() {
+"114
+[; ;main.c: 114: void __attribute__((picinterrupt(("")))) ngat_uart() {
 [v _ngat_uart `(v ~T1 @X0 1 ef ]
 {
 [e :U _ngat_uart ]
 [f ]
-"108
-[; ;main.c: 108:     byte_rx = USART_ReceiveChar();
-[e = _byte_rx ( _USART_ReceiveChar ..  ]
-"109
-[; ;main.c: 109:     if (byte_rx == 'S') {
-[e $ ! == -> _byte_rx `ui -> 83 `ui 343  ]
-{
-"110
-[; ;main.c: 110:         ena_rx = 1;
-[e = _ena_rx -> -> 1 `i `b ]
-"111
-[; ;main.c: 111:         rx_index = 0;
-[e = _rx_index -> -> 0 `i `uc ]
-"112
-[; ;main.c: 112:     } else if (byte_rx != 'P' && ena_rx == 1) {
-}
-[e $U 344  ]
-[e :U 343 ]
-[e $ ! && != -> _byte_rx `ui -> 80 `ui == -> _ena_rx `i -> 1 `i 345  ]
-{
-"113
-[; ;main.c: 113:         bf_rx[rx_index] = byte_rx;
-[e = *U + &U _bf_rx * -> _rx_index `ux -> -> # *U &U _bf_rx `ui `ux _byte_rx ]
-"114
-[; ;main.c: 114:         rx_index++;
-[e ++ _rx_index -> -> 1 `i `Vuc ]
 "115
-[; ;main.c: 115:         if (rx_index > 1) ena_rx = 0;
-[e $ ! > -> _rx_index `i -> 1 `i 346  ]
-[e = _ena_rx -> -> 0 `i `b ]
-[e :U 346 ]
+[; ;main.c: 115:     byte_rx = USART_ReceiveChar();
+[e = _byte_rx ( _USART_ReceiveChar ..  ]
 "116
-[; ;main.c: 116:     } else if (byte_rx == 'P' && ena_rx == 1) {
-}
-[e $U 347  ]
-[e :U 345 ]
-[e $ ! && == -> _byte_rx `ui -> 80 `ui == -> _ena_rx `i -> 1 `i 348  ]
+[; ;main.c: 116:     if (byte_rx == 'S') {
+[e $ ! == -> _byte_rx `ui -> 83 `ui 346  ]
 {
 "117
-[; ;main.c: 117:         if (bf_rx[0] == '1') {
-[e $ ! == -> *U + &U _bf_rx * -> -> -> 0 `i `ui `ux -> -> # *U &U _bf_rx `ui `ux `ui -> 49 `ui 349  ]
-{
+[; ;main.c: 117:         ena_rx = 1;
+[e = _ena_rx -> -> 1 `i `b ]
 "118
-[; ;main.c: 118:             ena_send = 1;
-[e = _ena_send -> -> 1 `i `b ]
+[; ;main.c: 118:         rx_index = 0;
+[e = _rx_index -> -> 0 `i `uc ]
 "119
-[; ;main.c: 119:             ena_rx = 0;
-[e = _ena_rx -> -> 0 `i `b ]
+[; ;main.c: 119:     } else if (byte_rx != 'P' && ena_rx == 1) {
+}
+[e $U 347  ]
+[e :U 346 ]
+[e $ ! && != -> _byte_rx `ui -> 80 `ui == -> _ena_rx `i -> 1 `i 348  ]
+{
 "120
-[; ;main.c: 120:         }
-}
-[e :U 349 ]
+[; ;main.c: 120:         bf_rx[rx_index] = byte_rx;
+[e = *U + &U _bf_rx * -> _rx_index `ux -> -> # *U &U _bf_rx `ui `ux _byte_rx ]
 "121
-[; ;main.c: 121:     }
-}
-[e :U 348 ]
-[e :U 347 ]
-[e :U 344 ]
+[; ;main.c: 121:         rx_index++;
+[e ++ _rx_index -> -> 1 `i `Vuc ]
 "122
-[; ;main.c: 122: }
-[e :UE 342 ]
+[; ;main.c: 122:         if (rx_index > 1) ena_rx = 0;
+[e $ ! > -> _rx_index `i -> 1 `i 349  ]
+[e = _ena_rx -> -> 0 `i `b ]
+[e :U 349 ]
+"123
+[; ;main.c: 123:     } else if (byte_rx == 'P' && ena_rx == 1) {
+}
+[e $U 350  ]
+[e :U 348 ]
+[e $ ! && == -> _byte_rx `ui -> 80 `ui == -> _ena_rx `i -> 1 `i 351  ]
+{
+"124
+[; ;main.c: 124:         if (bf_rx[0] == '1') {
+[e $ ! == -> *U + &U _bf_rx * -> -> -> 0 `i `ui `ux -> -> # *U &U _bf_rx `ui `ux `ui -> 49 `ui 352  ]
+{
+"125
+[; ;main.c: 125:             ena_send = 1;
+[e = _ena_send -> -> 1 `i `b ]
+"126
+[; ;main.c: 126:             ena_rx = 0;
+[e = _ena_rx -> -> 0 `i `b ]
+"127
+[; ;main.c: 127:         }
+}
+[e :U 352 ]
+"128
+[; ;main.c: 128:     }
+}
+[e :U 351 ]
+[e :U 350 ]
+[e :U 347 ]
+"129
+[; ;main.c: 129: }
+[e :UE 345 ]
 }

@@ -42,7 +42,7 @@ unsigned long read_temp(void) {
 ///////////////////////////////////////////////////////////////
 
 unsigned int mq2 = 0, mp2 = 0;
-unsigned long temp=0;
+unsigned long temp = 0;
 
 void main(void) {
     OSCCON = 0X7f; // cau hinh thach anh noi 16MHz
@@ -58,8 +58,8 @@ void main(void) {
     TRISAbits.TRISA2 = 1; //MQ2
     ANSELAbits.ANSA2 = 1;
 
-//    TRISCbits.TRISC0 = 1; //MP2
-//    ANSELCbits.ANSC0 = 1;
+    //    TRISCbits.TRISC0 = 1; //MP2
+    //    ANSELCbits.ANSC0 = 1;
 
     USART_Init();
 
@@ -74,6 +74,13 @@ void main(void) {
     bf_tx[13] = (unsigned char) (mp2 / 100 % 10 + 48);
     bf_tx[14] = (unsigned char) (mp2 / 10 % 10 + 48);
     bf_tx[15] = (unsigned char) (mp2 / 1 % 10 + 48);
+
+    while (temp <= 314573 || temp >= 781189) {
+        Cmd_Aht10(); // gui yeu cau chuyen doi nhiet do
+        __delay_ms(80); // thoi gian cho chuyen doi nhiet do
+        temp = read_temp();
+        
+    }
     while (1) {
         ////////////////////////////////////////////////////
         Cmd_Aht10(); // gui yeu cau chuyen doi nhiet do
